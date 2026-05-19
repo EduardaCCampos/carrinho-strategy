@@ -207,10 +207,10 @@ Ou use o botão abaixo:
 
 | Nome | GitHub |
 |---|---|
-| [Cissa Fernandes] | ) |
-| [Clara Bertão] | [@clarabertao](https://github.com/clarabertao) |
-| [Eduarda Lima] | [](https://github.com/EduardaCCampos) |
-| [Sarah Godinho] | [@Sarocaa](https://github.com/Sarocaa) |
+| Cissa Fernandes | @cissaff ) (https://github.com/cissaff)  |
+| Clara Bertão | [@clarabertao](https://github.com/clarabertao) |
+| Eduarda Lima | [@EduardaCCampos](https://github.com/EduardaCCampos) |
+| Sarah Godinho | [@Sarocaa](https://github.com/Sarocaa) |
 
 ---
 
