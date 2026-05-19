@@ -1,4 +1,4 @@
-<img width="704" height="684" alt="image" src="https://github.com/user-attachments/assets/5a3bb78b-4ade-4852-848a-e009988fc7c2" /># 🛒 Carrinho de Compras Digital — Padrão Strategy (GoF)
+# 🛒 Carrinho de Compras Digital — Padrão Strategy (GoF)
 
 > Implementação didática do padrão de projeto comportamental **Strategy** em Python, aplicado a um sistema de pagamentos intercambiáveis em um carrinho de compras digital.
 
@@ -45,40 +45,7 @@ em tempo de execução sem usar condicionais (if/elif/switch)?
 --- 
 ## 📐 Diagrama de Classes UML
 
-```
-┌──────────────────────────────────────────────┐
-│                  Carrinho                   │
-├──────────────────────────────────────────────┤
-│ - items: list                               │
-│ - _payment_strategy: PaymentStrategy        │
-├──────────────────────────────────────────────┤
-│ + add_item(name, price)                     │
-│ + calculate_total() -> float                │
-│ + set_payment_strategy(strategy)            │
-│ + checkout() -> str                         │
-└──────────────────────┬───────────────────────┘
-                       │ delega o pagamento
-                       ▼
-┌──────────────────────────────────────────────┐
-│             <<interface>>                    │
-│              PaymentStrategy                 │
-├──────────────────────────────────────────────┤
-│ + pay(amount) -> str                         │
-└───────────────┬───────────────┬──────────────┘
-                │               │
-      implementa│     implementa│     implementa
-                │               │
-        ▼               ▼               ▼
-
-┌─────────────────┐ ┌────────────────────┐ ┌─────────────────┐
-│       Pix       │ │   CartaoCredito    │ │     Boleto      │
-├─────────────────┤ ├────────────────────┤ ├─────────────────┤
-│                 │ │ - installments:int │ │                 │
-├─────────────────┤ ├────────────────────┤ ├─────────────────┤
-│ + pay(amount)   │ │ + pay(amount)      │ │ + pay(amount)   │
-│   -> str        │ │   -> str           │ │   -> str        │
-└─────────────────┘ └────────────────────┘ └─────────────────┘
-```
+<img width="704" height="684" alt="image" src="https://github.com/user-attachments/assets/5a3bb78b-4ade-4852-848a-e009988fc7c2" />
 
 ---
 
