@@ -1,0 +1,31 @@
+@startuml
+
+    class Carrinho {
+        - items: list
+        - _payment_strategy: PaymentStrategy
+        + add_item(name, price)
+        + calculate_total() float
+        + set_payment_strategy(strategy)
+        + checkout() str
+    }
+    class PaymentStrategy {
+        <<interface>>
+        + pay(amount)* str
+    }
+    class Pix {
+        + pay(amount) str
+    }
+    class CartaoCredito {
+        - installments: int
+        + pay(amount) str
+    }
+    class Boleto {
+        + pay(amount) str
+    }
+
+    Carrinho o--> PaymentStrategy : Delega o pagamento
+    PaymentStrategy <|-- Pix : Implementa
+    PaymentStrategy <|-- CartaoCredito : Implementa
+    PaymentStrategy <|-- Boleto : Implementa
+
+@enduml
